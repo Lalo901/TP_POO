@@ -1,2 +1,0 @@
-# TP_POO
-TrabajosPracticos
