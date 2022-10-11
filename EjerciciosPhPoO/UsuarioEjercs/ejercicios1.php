@@ -28,7 +28,8 @@ class Usuario{
     }
 
 }
-
+$usuario=new Usuario('eduardo','hola');
+echo $usuario->getNombreDeUsuario();
 
 
 

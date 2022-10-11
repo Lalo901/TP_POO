@@ -1,11 +1,18 @@
 <?php
-include_once('banco.php');
-include_once('cliente.php');
-include_once('cuentaBancaria.php');
+namespace Banco;
+namespace CuentaBancaria;
+namespace Clientes;
+/*
+include_once "TPEspecial/Banco/banco.php";
+//include_once "Clientes/cliente.php";
+include_once "TPEspecial/CuentaBancaria/cuentaBancaria.php";
+
+use TPEspecial\Banco\banco;
+use TPEspecial\CuentaBancaria\cuentaBancaria;*/
 
 class CajaAhorro extends CuentaBancaria{
 
-    private $interesMensual= 2;
+    private $interesMensual= 5;
     
     public function __construct($nroCta, $fechaApertura, $saldo, $cbu,$interesMensual){
         parent::construct($nroCta, $fechaApertura, $saldo, $cbu);
@@ -16,6 +23,14 @@ class CajaAhorro extends CuentaBancaria{
     }
     public function setInteresMensual($intMensual){
         $this -> interesMensual =$intMensual;
+    }
+
+    public function obtenerInteres($dias){
+        $this->interesMensual= (($interesMensual/100) * 1/365);
+        if ($this->saldo > 0){
+            $interes= $this->saldo * $this->InteresMensual * $dias;
+            echo"el importe del mes es ".$interes;
+        }
     }
 
     public function extraer($importe){
@@ -32,4 +47,6 @@ class CajaAhorro extends CuentaBancaria{
     }
 
 }
+
+
 ?>

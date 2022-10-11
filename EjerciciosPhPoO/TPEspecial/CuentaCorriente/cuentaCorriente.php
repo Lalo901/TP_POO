@@ -1,7 +1,13 @@
 <?php
-include_once('banco.php');
-include_once('cliente.php');
-include_once('cuentaBancaria.php');
+
+namespace Banco;
+namespace CuentaBancaria;
+namespace Clientes;
+/*
+include_once'banco.php';
+include_once'cliente.php';
+include_once'cuentaBancaria.php';*/
+
 //hereda de Cuenta Bancaria
 class CuentaCorriente extends CuentaBancaria{
     

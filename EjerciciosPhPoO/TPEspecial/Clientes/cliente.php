@@ -1,5 +1,9 @@
 <?php
 
+namespace Banco;
+namespace CuentaBancaria;
+
+
 Class Cliente{
     
     private $nombre;

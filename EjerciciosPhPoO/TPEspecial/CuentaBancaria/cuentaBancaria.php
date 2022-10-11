@@ -1,6 +1,10 @@
 <?php
-include_once('banco.php');
-include_once('cliente.php');
+
+namespace Banco;
+namespace CuentaBancaria;
+namespace Clientes;
+//include_once('banco.php');
+//include_once('cliente.php');
 
 abstract class CuentaBancaria{
 
