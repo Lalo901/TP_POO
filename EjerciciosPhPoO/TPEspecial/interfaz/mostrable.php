@@ -2,7 +2,7 @@
 
 namespace interfaz;
 
-interface Mostrable{
+interface Mostrable {
 
     public function mostrar();
 

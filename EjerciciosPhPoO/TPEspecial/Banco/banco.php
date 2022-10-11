@@ -1,8 +1,9 @@
 <?php
     namespace interfaz;
-    //include_once "mostrable/mostrable.php";
+    namespace Banco;
+    //include_once "/TPEspecial/interfaz/mostrable.php";//no lee la dir interfaz
 
-    Class Banco implements Mostrable{
+    Class Banco implements Mostrable {
         private $nombre;
         private $direccion;
         private $cuenta = array();
@@ -30,8 +31,11 @@
 
 
     }
-/*
-    $banco = new Banco('Galicia', 'Pinto 300');
+
+    /*$banco = new Banco('Galicia', 'Pinto 300');
+    $banco->mostrar();*/
+
+    /*
     $cuenta=new CajaAhorro($nroCta, $fechaApertura, $saldo, $cbu,$interesMensual);
     $banco->agregarCuenta($cuenta);
     //echo 'El banco '.$banco->getNombre().' esta en la calle '. $banco->getDireccion()."\n";
